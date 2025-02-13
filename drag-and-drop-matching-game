@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Matching Game</title>
+    <style>
+        .draggable {
+            width: 100px;
+            padding: 10px;
+            margin: 10px;
+            background-color: lightblue;
+            cursor: move;
+        }
+        .dropzone {
+            width: 120px;
+            height: 50px;
+            margin: 10px;
+            padding: 10px;
+            border: 2px dashed #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="word1" class="draggable" draggable="true">Word 1</div>
+    <div id="word2" class="draggable" draggable="true">Word 2</div>
+    <div id="desc1" class="dropzone">Description 1</div>
+    <div id="desc2" class="dropzone">Description 2</div>
+
+    <script>
+        const draggables = document.querySelectorAll('.draggable');
+        const dropzones = document.querySelectorAll('.dropzone');
+
+        draggables.forEach(draggable => {
+            draggable.addEventListener('dragstart', () => {
+                draggable.classList.add('dragging');
+            });
+
+            draggable.addEventListener('dragend', () => {
+                draggable.classList.remove('dragging');
+            });
+        });
+
+        dropzones.forEach(dropzone => {
+            dropzone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                const dragging = document.querySelector('.dragging');
+                dropzone.appendChild(dragging);
+            });
+        });
+    </script>
+</body>
+</html>
