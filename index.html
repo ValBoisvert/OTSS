@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Matching Game</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Drag and Drop Matching Game</h1>
+    <p>Match the word to the description</p>
+    <div class="container">
+        <div class="words" id="words">
+            <div class="word" draggable="true" id="vacate">Vacate</div>
+            <div class="word" draggable="true" id="vary">Vary</div>
+            <div class="word" draggable="true" id="confirm">Confirm</div>
+            <div class="word" draggable="true" id="concurrence">Concurrence</div>
+            <div class="word" draggable="true" id="objection">Objection</div>
+            <div class="word" draggable="true" id="in-fact-in-law">“in fact” and “in law”</div>
+            <div class="word" draggable="true" id="judgment">Judgment</div>
+            <div class="word" draggable="true" id="ministers-response">Minister’s response</div>
+            <div class="word" draggable="true" id="reasonable">Reasonable</div>
+            <div class="word" draggable="true" id="tax-representation">Tax representation</div>
+            <div class="word" draggable="true" id="transparency">Transparency</div>
+        </div>
+        <div class="descriptions">
+            <div class="description" data-word="vacate">Act of annulling or denying the validity of a previous decision, order, or agreement.</div>
+            <div class="description" data-word="vary">Implies that tax obligations are not static and can change based on specific criteria or actions taken by the taxpayer or tax authority.</div>
+            <div class="description" data-word="confirm">Establish the truth or validity of an agreement that has been made previously.</div>
+            <div class="description" data-word="concurrence">Two or more events, conditions, or opinions simultaneously or in agreement.</div>
+            <div class="description" data-word="objection">A formal disagreement or dispute regarding a tax assessment or decision made by tax authorities.</div>
+            <div class="description" data-word="in-fact-in-law">Used in legal contexts to distinguish between what is true based on factual evidence and what is recognized as true based on legal principles or statutes.</div>
+            <div class="description" data-word="judgment">Ruling made by a court of law after considering the evidence and arguments presented in a case.</div>
+            <div class="description" data-word="ministers-response">Official statement or reply issued by a government official on inquiries about tax legislation.</div>
+            <div class="description" data-word="reasonable">One that is appropriate, sensible, and consistent with what would typically be incurred.</div>
+            <div class="description" data-word="tax-representation">Services provided by tax professionals.</div>
+            <div class="description" data-word="transparency">The clear and open communication of tax information.</div>
+        </div>
+    </div>
+    <button id="verify" disabled>Verify my answers</button>
+    <button id="reset">Reset</button>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <p id="score"></p>
+            <button id="retry">Retry</button>
+            <button id="see-answers">See the answers</button>
+            <button id="quit">Quit</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
