@@ -1,0 +1,49 @@
+<style type="text/css">
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.words, .descriptions {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.word, .description {
+    padding: 10px;
+    margin: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.description {
+    min-height: 50px;
+}
+
+.word.dragging {
+    opacity: 0.5;
+}
+
+.description.over {
+    border-color: #000;
+}
+</style>
